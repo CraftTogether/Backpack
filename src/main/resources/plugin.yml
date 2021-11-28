@@ -1,0 +1,8 @@
+name: Backpack
+version: '${project.version}'
+main: com.github.x3rition.backpack.Main
+api-version: 1.17
+commmands:
+  backpack:
+    aliases: bp
+    usage: /<command>
