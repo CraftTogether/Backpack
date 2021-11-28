@@ -1,8 +1,4 @@
 name: Backpack
 version: '${project.version}'
-main: com.github.x3rition.backpack.Main
+main: com.github.craftTogether.backpack.Plugin
 api-version: 1.17
-commmands:
-  backpack:
-    aliases: bp
-    usage: /<command>

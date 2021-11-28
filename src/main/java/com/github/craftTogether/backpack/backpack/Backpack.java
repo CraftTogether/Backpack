@@ -1,7 +1,10 @@
-package com.github.x3rition.backpack.backpack;
+package com.github.craftTogether.backpack.backpack;
 
+import com.github.craftTogether.backpack.Base64;
+import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.Inventory;
+
 import java.io.IOException;
 import java.util.UUID;
 
@@ -12,12 +15,12 @@ public class Backpack {
 
     public Backpack(UUID uuid) {
         this.uuid = uuid;
-        this.inventory = Bukkit.createInventory(null, 36 /* x * 9 */, "Backpack");
+        this.inventory = Bukkit.createInventory(null, 36, PlainTextComponentSerializer.plainText().deserialize("Backpack"));
     }
 
     public Backpack(UUID uuid, String base64) throws IOException {
         this.uuid = uuid;
-        this.inventory = Bukkit.createInventory(null, 36 /* x * 9*/, "Backpack");
+        this.inventory = Bukkit.createInventory(null, 36, PlainTextComponentSerializer.plainText().deserialize("Backpack"));
         this.inventory.setContents(Base64.itemStackArrayFromBase64(base64));
     }
 
@@ -32,4 +35,5 @@ public class Backpack {
     public String toBase64() {
         return Base64.itemStackArrayToBase64(inventory.getContents());
     }
+
 }

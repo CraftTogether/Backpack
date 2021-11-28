@@ -1,4 +1,4 @@
-package com.github.x3rition.backpack.backpack;
+package com.github.craftTogether.backpack;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 

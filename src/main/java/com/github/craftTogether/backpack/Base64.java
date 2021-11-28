@@ -1,4 +1,4 @@
-package com.github.x3rition.backpack.backpack;
+package com.github.craftTogether.backpack;
 
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.io.BukkitObjectInputStream;
@@ -9,6 +9,9 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
+/**
+ * Encoder and decoder for {@link ItemStack}.
+ */
 public class Base64 {
 
     public static ItemStack[] itemStackArrayFromBase64(String data) throws IOException {
